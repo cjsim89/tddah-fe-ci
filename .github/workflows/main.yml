@@ -14,5 +14,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5.5.1 # use the explicit version number
         with:
-          build: npm run build
-          start: npm start
+          command-prefix: npm run
+          command: cy
