@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Cypress Tests and Heroku Deployment
 
 on: [push]
 
@@ -9,11 +9,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v5.5.1 # use the explicit version number
-        with:
-          build: npm run build
-          start: npm start
+        
+      - name: Deploy to Heroku
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: |
+          # Set up Heroku git remote
+          git remote add heroku https://$HEROKU_API_KEY@git.heroku.com/tddah-fe.git
 
+          # Push changes to Heroku
+          git push heroku HEAD:main

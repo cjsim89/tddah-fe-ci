@@ -5,6 +5,9 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Login from '../Login/Login'
 import Redirect from '../Redirect/Redirect'
+import Achievements from '../Achievements/Achievements';
+import SubmitTests from '../SubmitTests/SubmitTests'
+
 function App() {
   return (
     <section className='main'>
@@ -12,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route  path='/home' element={<Home />} />
+        <Route path='/submittest' element={<SubmitTests />} />
         <Route path='/auth/github/callback' element={<Redirect />} />
       </Routes>
       <Footer />

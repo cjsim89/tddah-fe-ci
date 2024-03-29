@@ -1,3 +1,20 @@
+.header {
+  padding-bottom: 20px;
+}
 .title {
   text-align: center;
+  font-size: 2em;
+  margin-bottom: 0.1em;
+}
+
+.title-long {
+  font-size: .5em;
+  color: #333;
+}
+
+.logo {
+  width: 100px; 
+  margin-right: 1em; 
+  position: fixed;
+
 }
