@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
-import Form from '../Form/Form'
-
+import Achievements from '../Achievements/Achievements'
 
 function Home() {
 
@@ -10,8 +9,7 @@ function Home() {
   return (
     <section>
       <Navbar />
-      <h1>hi</h1>
-      <Form />
+      <Achievements />
     </section>
   )
 }

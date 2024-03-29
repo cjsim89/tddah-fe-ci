@@ -1,5 +1,29 @@
 .nav-bar {
-  display:flex;
-  flex-direction: row;
-  gap: 20px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
+
+.nav-button {
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #777;
+}
+
+h3 {
+  margin: 0;
+}
+
+

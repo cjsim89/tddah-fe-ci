@@ -16,4 +16,13 @@ jobs:
         with:
           build: npm run build
           start: npm start
+- name: Deploy to Heroku
+        run: |
+          # Login to Heroku
+          heroku login -i
 
+          # Add Heroku remote to the git repository
+          heroku git:remote -a your-heroku-app-name
+
+          # Push the changes to Heroku remote
+          git push heroku HEAD:main
