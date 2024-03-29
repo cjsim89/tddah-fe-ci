@@ -20,12 +20,11 @@ jobs:
 
       # Add a step to deploy to Heroku
       - name: Deploy to Heroku
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         run: |
-          # Login to Heroku
-          heroku login -i
-
-          # Add Heroku remote to the git repository
+          # Set up Heroku git remote
           heroku git:remote -a tddah-fe
 
-          # Push the changes to Heroku remote
+          # Push changes to Heroku
           git push heroku HEAD:main
