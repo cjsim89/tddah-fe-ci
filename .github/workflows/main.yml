@@ -25,7 +25,7 @@ jobs:
           heroku login -i
 
           # Add Heroku remote to the git repository
-          heroku git:remote -a your-heroku-app-name
+          heroku git:remote -a tddah-fe
 
           # Push the changes to Heroku remote
           git push heroku HEAD:main
