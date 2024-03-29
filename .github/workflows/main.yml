@@ -9,14 +9,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        
+
       - name: Deploy to Heroku
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         run: |
-          # Login to Heroku
-          heroku login -i
-
+    
           # Set up Heroku git remote
           heroku git:remote -a tddah-fe
 
