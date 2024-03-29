@@ -15,7 +15,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5.5.1 # use the explicit version number
         with:
-          start: npm run cypress
+          start: npx cypress run
 
       # Add a step to deploy to Heroku
       - name: Deploy to Heroku
