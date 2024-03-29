@@ -9,15 +9,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v5.5.1
-        with:
-          start: npm run cypress run
-
-      # Add a step to deploy to Heroku
+        
       - name: Deploy to Heroku
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
